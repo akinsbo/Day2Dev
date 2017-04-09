@@ -18,7 +18,10 @@ npm install --save-dev cucumber
 
 ###create directory
 features/addItem.feature
+features/step-definitions/additem.js
 
+#run cucumber
+$ node_modules/.bin/cucumber-js
 
 #install selenium web-driver
 npm install selenium web-driver (didn't work - but no worries, leave it for now)
