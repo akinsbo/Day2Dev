@@ -7,6 +7,10 @@ npm install --save material-components-web
 #added enzyme for testing
 npm install --save-dev enzyme react-addons-test-utils
 
+#added chai from chai
+$ npm install --save-dev chai
+$ npm install --save-dev sinon
+
 ###Solved the problem of snapshot rendering by manually adding
 'react-test-renderer': "*"   :in package.json**
 
@@ -22,6 +26,9 @@ features/step-definitions/additem.js
 
 #run cucumber
 $ node_modules/.bin/cucumber-js
+
+#this can also run the step-definitions
+$ node_modules/.bin/cucumber-js -r features/step-definitions
 
 #install selenium web-driver
 npm install selenium web-driver (didn't work - but no worries, leave it for now)

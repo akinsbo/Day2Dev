@@ -2,7 +2,6 @@
 
 module.exports = function() {
 
-
   // Scenario: Image added to mock-homepage
   // Given I have a mock-homepage
   // When I add an image to it

@@ -12,6 +12,6 @@ Feature: Components send update request with information
   Then the image should be updated
 
   Scenario: Updated image undone and redone
-  Given I have an imagedrop Component
+  Given I have an imagedrop component
   When I click undo
   Then the previous image should be updated
