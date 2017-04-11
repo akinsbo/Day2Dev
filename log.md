@@ -11,6 +11,9 @@ npm install --save-dev enzyme react-addons-test-utils
 $ npm install --save-dev chai
 $ npm install --save-dev sinon
 
+
+# or just do
+npm install --save-dev enzyme react-addons-test-utils mocha chai sinon
 ###Solved the problem of snapshot rendering by manually adding
 'react-test-renderer': "*"   :in package.json**
 
@@ -32,7 +35,36 @@ $ node_modules/.bin/cucumber-js -r features/step-definitions
 
 #install selenium web-driver
 npm install selenium web-driver (didn't work - but no worries, leave it for now)
+=--------------------CSS Preprocessor-----------------------------------------
+$ npm install node-sass --save-dev
 
+added the following to package.json, under script
++    "build-css": "node-sass src/ -o src/",
++    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+
+#run this to watch
+$ npm run watch-css
+
+#ignore component css cos we use sass. We added this to .gitignore
+src/**/*.css
+
+
+----for build -----
+$ npm install --save-dev npm-run-all
+
+"scripts": {
+  "build-css": "node-sass src/ -o src/",
+  "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+-    "start": "react-scripts start",
+-    "build": "react-scripts build",
++    "start-js": "react-scripts start",
++    "start": "npm-run-all -p watch-css start-js",
++    "build": "npm run build-css && react-scripts build",
+  "test": "react-scripts test --env=jsdom",
+  "eject": "react-scripts eject"
+}
+
+------------------------------------------------------------------------------
 ------------------**BACKEND**---------------------------------
 ------------------Unit Testing--------------------------------
 $ phpunit -c app/

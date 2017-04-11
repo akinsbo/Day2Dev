@@ -16,3 +16,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#ignore component css cos we use sass
+src/**/*.css

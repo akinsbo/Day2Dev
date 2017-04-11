@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './../App';
+import FileDrop from './../FileDrop';
+
 import { expect } from 'chai';
 import { sinon, spy } from 'sinon';
 import {mount, render, shallow} from 'enzyme'
 
+//Imagefile updated via dropping and clicking
+describe('Given I have an imagedrop component', () => {
 
-describe('<App />', () => {
-
-it('renders without crashing', () => {
+it('contains imagedrop component', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<FileDrop />, div);
 });
 
 });
