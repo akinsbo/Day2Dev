@@ -1,3 +1,4 @@
+//'Given I have an imagedrop component'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FileDrop from './../FileDrop';
@@ -7,7 +8,8 @@ import { sinon, spy } from 'sinon';
 import {mount, render, shallow} from 'enzyme'
 
 //Imagefile updated via dropping and clicking
-describe('Given I have an imagedrop component', () => {
+//
+describe('A rectangle that can replace an image with width and height', () => {
 
 it('contains imagedrop component', () => {
   const div = document.createElement('div');
@@ -26,13 +28,20 @@ it('rectangle width and height can be set arbitrarily', () => {
 
 });
 
-it('responds to click', () => {
-
-});
-
 it('responds to drag n drop', () => {
 
 });
 
+});
+
+
+describe('when I click', () => {
+
+  it('responds to click', () => {
+
+  });
 
 });
+
+
+describe('')

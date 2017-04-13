@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import {checkbox as mdcCheckbox} from 'material-components-web';
 import ReactDOM from 'react-dom';
-import '../css/component/_fileDrop.css';
+import '../App.css';
 
 class FileDrop extends Component{
     render() {
