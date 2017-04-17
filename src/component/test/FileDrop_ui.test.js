@@ -15,12 +15,24 @@ it('contains imagedrop component', () => {
 });
 
 
-it('added image file', () => {
+it('contains a rectangle', () => {
   const wrapper = shallow(<FileDrop />);
-  //const rectangle = rectangle;
-  //input filename
-  // expect(wrapper.contains(welcome)).to.equal(true);
-//  expect(wrapper.contains(rectangle)).toEqual(true);
+ // const rectangle =  "rectangle";
+  expect(wrapper.hasClass("rectangle")).to.equal(true);
+  // expect(wrapper.contains(rectangle)).toEqual(true);
+});
+
+it('rectangle width and height can be set arbitrarily', () => {
+const wrapper = mount(<FileDrop width={10} height={12} />);
+expect(wrapper.prop('width')).to.equal(10);
+});
+
+it('responds to click', () => {
+
+});
+
+it('responds to drag n drop', () => {
+
 });
 
 
