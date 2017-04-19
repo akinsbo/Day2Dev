@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import FileDrop from './../FileDrop';
 
 import { expect } from 'chai';
-import { sinon, spy } from 'sinon';
+import sinon from 'sinon';
 import {mount, render, shallow} from 'enzyme'
 
 //Imagefile updated via dropping and clicking
@@ -28,12 +28,18 @@ expect(wrapper.prop('width')).to.equal(10);
 });
 
 it('responds to click', () => {
+  const divClicked = sinon.spy();
+  const wrapper = shallow(<FileDrop />  );
+  // expect(wrapper.length).to.equal(1);
+  wrapper.find('div').simulate('click');
+    // console.log(wrapper.state('clickCount')) // prints false
+  // expect(wrapper.prop('clickCount')).to.equal(1);
+  expect(divClicked.calledOnce).to.equal(true);
 
 });
 
 it('responds to drag n drop', () => {
 
 });
-
 
 });
