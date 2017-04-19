@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../App.css';
 
-class FileDrop extends Component{
+class GridBox extends Component{
 
   constructor(props) {
   super(props);
@@ -11,7 +11,6 @@ class FileDrop extends Component{
     // width: 0,
     // height: 0,
     clickCount: 0,
-    draggable: true,
   };
   this.greeterText = this.greeterText.bind(this);
   this.handleClick = this.handleClick.bind(this);
@@ -51,17 +50,15 @@ greeterText(){
 }
     render() {
       return (
-        <div className="FileDrop card card-rounded-border rectangle"
+        <div className="GridBox card card-rounded-border rectangle"
          onClick={this.handleClick}
-         draggable={this.state.draggable}
-         onDragStart={this.handleDrag}
          onDragOver={this.allowDrop}
          onDrop={this.handleDrop}
-          style={{width: this.props.width, height: this.props.height}}>
-        <input type="file" name="pic" accept="image/*"/>
+         style={{width: this.props.width, height: this.props.height}}>
+          {this.props.children}
         </div>
       );
   }
 }
 
-export default FileDrop;
+export default GridBox;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import FileDrop from './component/FileDrop';
+import GridBox from './component/GridBox';
 import './App.css';
 
 class App extends Component {
@@ -14,10 +15,14 @@ class App extends Component {
         <div className="container">
         <div className="row">
         <div className="col-sm-6">
+        <GridBox>
         <FileDrop width={100+'%'} height={100+'%'} />
+        </GridBox>
         </div>
         <div className="col-sm-6">
+        <GridBox>
         <FileDrop width={100+'%'} height={100+'%'} />
+        </GridBox>
         </div>
         </div>
         </div>

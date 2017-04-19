@@ -37,10 +37,4 @@ it('responds to click', () => {
   // expect(divClicked.called).to.equal(true);
 });
 
-it('responds to drag n drop', () => {
- const wrapper = shallow(<FileDrop />);
- wrapper.find('div').simulate('drag');
- expect(wrapper.state('draggable')).to.equal(true);
-});
-
 });
