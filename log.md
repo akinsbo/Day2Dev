@@ -35,7 +35,25 @@ $ node_modules/.bin/cucumber-js -r features/step-definitions
 
 #install selenium web-driver
 npm install selenium web-driver (didn't work - but no worries, leave it for now)
-=--------------------CSS Preprocessor-----------------------------------------
+---------------------------FEATURES---------------------------------------------
+---------------------------END DRAG-N-DROP--------------------------------------
+npm install --save react-dnd
+npm install --save react-dnd-html5-backend
+
+####Enable Decorator Syntax############
+# enable decorator syntax {@XYZ} of ES7
+npm i -S babel-plugin-transform-decorators-legacy
+
+# Then update your .babelrc file to add the legacy decorator support plug-in like so:
+
+{
+  "presets": ["es2015", "react", "stage-1"],
+  "plugins": ["transform-decorators-legacy"]
+}
+
+---------------------------END DRAG-N-DROP--------------------------------------
+
+=--------------------BUILD- CSS Preprocessor------------------------------------
 $ npm install node-sass --save-dev
 
 added the following to package.json, under script

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import {checkbox as mdcCheckbox} from 'material-components-web';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import '../App.css';
 
 class GridBox extends Component{
@@ -11,12 +11,12 @@ class GridBox extends Component{
     // width: 0,
     // height: 0,
     clickCount: 0,
+    draggedOver: ''
   };
   this.greeterText = this.greeterText.bind(this);
   this.handleClick = this.handleClick.bind(this);
-  this.handleDrag = this.handleDrag.bind(this);
   this.handleDrop = this.handleDrop.bind(this);
-
+  this.allowDrop = this.allowDrop.bind(this)
 }
 
 // componentDidMount(){
@@ -33,24 +33,27 @@ this.setState({clickCount: this.state.clickCount + 1});
 // console.log(id);
 }
 
-handleDrag(){
-  console.log('is being dragged');
-}
-
-handleDrop(){
-  console.log('is being dropped');
+handleDrop(event){
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  console.log(event);
+  console.log('data is = '+ data);
+ event.target.appendChild(document.getElementById(data));
+// console.log('is being dropped');
 }
 
 allowDrop(event){
   // console.log('drop is allowed');
-  event.preventDefault;
+  event.preventDefault();
+  this.setState({draggedOver: "highlight-orange"});
 }
 greeterText(){
   return (<p>wow, greeter text added</p>);
 }
-    render() {
+
+    render() {//console.log("draggedOver = " + this.state.draggedOver);
       return (
-        <div className="GridBox card card-rounded-border rectangle"
+        <div className={"GridBox card card-rounded-border rectangle boxed " + (this.state.draggedOver? "highlight-orange": "")}
          onClick={this.handleClick}
          onDragOver={this.allowDrop}
          onDrop={this.handleDrop}
