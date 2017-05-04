@@ -36,7 +36,7 @@ $ node_modules/.bin/cucumber-js -r features/step-definitions
 #install selenium web-driver
 npm install selenium web-driver (didn't work - but no worries, leave it for now)
 ---------------------------FEATURES---------------------------------------------
----------------------------END DRAG-N-DROP--------------------------------------
+---------------------------START DRAG-N-DROP--------------------------------------
 npm install --save react-dnd
 npm install --save react-dnd-html5-backend
 
@@ -52,7 +52,10 @@ npm i -S babel-plugin-transform-decorators-legacy
 }
 
 ---------------------------END DRAG-N-DROP--------------------------------------
-
+----------------------------TYPECHECK on JS-------------------------------------
+# install prop-types library
+npm install --save prop-types
+--------------------------------------------------------------------------------
 =--------------------BUILD- CSS Preprocessor------------------------------------
 $ npm install node-sass --save-dev
 

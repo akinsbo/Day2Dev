@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Card from './component/Card';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <Card />,
   document.getElementById('root')
 );
 // const comment = {
