@@ -51,12 +51,12 @@ greeterText(){
   return (<p>wow, greeter text added</p>);
 }
 
-    render() {//console.log("draggedOver = " + this.state.draggedOver);
-      return (
+    render() {//console.log("draggedOver = " + this.state.draggedOver);          /**onDrop={this.handleDrop}**/
+
+      return (         /**onDrop={this.handleDrop}**/
         <div className={"GridBox card card-rounded-border rectangle boxed " + (this.state.draggedOver? "highlight-orange": "")}
          onClick={this.handleClick}
          onDragOver={this.allowDrop}
-         onDrop={this.handleDrop}
          style={{width: this.props.width, height: this.props.height}}>
           {this.props.children}
         </div>

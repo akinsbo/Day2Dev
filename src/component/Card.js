@@ -46,7 +46,7 @@ class Card extends React.Component{
   render() {
     const { isDragging, connectDragSource, text } = this.props;
     return connectDragSource(
-      <div className="App" style={{ opacity: isDragging ? 0.5 : 1 }}>
+      <div className="App" style={{ ...style, opacity: isDragging ? 0.5 : 1 }}>
         {text}
       </div>
     );

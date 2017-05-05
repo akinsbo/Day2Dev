@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import FileDrop from './component/FileDrop';
 import GridBox from './component/GridBox';
 import NameForm from './component/NameForm';
+import Client from './component/Client';
 
 //Dnd imports
 import HTML5Backend from 'react-dnd-html5-backend';
@@ -33,6 +34,7 @@ class App extends Component {
         </div>
         <div className="row">
         <NameForm />
+        <Client />
         </div>
         </div>
         <p className="App-intro">
