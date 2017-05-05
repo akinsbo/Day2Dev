@@ -25,6 +25,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "faker": "^3.1.0",
     "file-loader": "^0.9.0",
+    "flow-bin": "^0.45.0",
     "html-loader": "^0.4.4",
     "jest": "^18.1.0",
     "karma-sourcemap-loader": "^0.3.6",
@@ -50,10 +51,12 @@
   },
   "dependencies": {
     "eslint": "^3.19.0",
+    "lodash": "^4.17.4",
     "material-components-web": "^0.8.0",
     "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-dnd": "^2.3.0",
+    "react-dnd-html5-backend": "^2.3.0",
     "react-dom": "^15.4.2",
     "redux": "^3.6.0"
   },

@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import FileDrop from './component/FileDrop';
 import GridBox from './component/GridBox';
-import NameForm from './component/NameForm'
+import NameForm from './component/NameForm';
+
+//Dnd imports
+import HTML5Backend from 'react-dnd-html5-backend';
+import { DragDropContext } from 'react-dnd';
+import Card from './component/Card';
 import './App.css';
 
 class App extends Component {
@@ -22,6 +27,7 @@ class App extends Component {
         </div>
         <div className="col-sm-6">
         <GridBox height={50+'px'} id='gridbox2'>
+        <Card text="wa-wa-wiwa" />
         </GridBox>
         </div>
         </div>
@@ -37,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default DragDropContext(HTML5Backend)(App);

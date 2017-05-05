@@ -35,6 +35,12 @@ $ node_modules/.bin/cucumber-js -r features/step-definitions
 
 #install selenium web-driver
 npm install selenium web-driver (didn't work - but no worries, leave it for now)
+------------------------------END BDD------------------------------------------
+------------------------------STATIC TYPECHECKER SETUP--------------------------
+npm install --save-dev flow-bin
+
+-------------------------------END TYPECHECKER SETUP----------------------------
+
 ---------------------------FEATURES---------------------------------------------
 ---------------------------START DRAG-N-DROP--------------------------------------
 npm install --save react-dnd

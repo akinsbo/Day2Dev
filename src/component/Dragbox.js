@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { DragSource } from 'react-dnd';
 import { ItemTypes } from './Constants';
 // import {checkbox as mdcCheckbox} from 'material-components-web';
 import '../App.css';
 
 class Dragbox extends Component{
-
+  
   constructor(props) {
   super(props);
   this.state = {
