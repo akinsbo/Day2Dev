@@ -4,7 +4,9 @@ import FileDrop from './component/FileDrop';
 import GridBox from './component/GridBox';
 import NameForm from './component/NameForm';
 import Client from './component/Client';
-
+import Combredux from './component/Combredux';
+import MiddleWare from './component/MiddleWare';
+import AsyncMiddleware from './component/AsyncMiddleware';
 //Dnd imports
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd';
@@ -35,6 +37,9 @@ class App extends Component {
         <div className="row">
         <NameForm />
         <Client />
+        <Combredux />
+        <MiddleWare />
+        <AsyncMiddleware />
         </div>
         </div>
         <p className="App-intro">
